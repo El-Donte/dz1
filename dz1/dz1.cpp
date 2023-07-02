@@ -1,13 +1,14 @@
-﻿
-
-#include <iostream>
+﻿#include <iostream>
 #include "fraction.h"
+
+//using namespace frc;
+
 int main()
 {   
     setlocale(LC_ALL, "Russian");
     int key, num, dem;
-    Fraction F1(0,0);
-    Fraction F2(0,0);
+    frc::Fraction F1(0,0);
+    frc::Fraction F2(0,0);
     do {
         std::cout << "\nвыберете действие:\n1.сложение\n2.вычитание\n3.умножение\n4.деление\n5.выход\n-> ";
         std::cin >> key;

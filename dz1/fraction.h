@@ -1,34 +1,29 @@
 #pragma once
-class Fraction
-{
-	int numerator, denominator;
+namespace frc {
+	class Fraction
+	{
+		int numerator, denominator;
+	public:
+		Fraction(int newNumerator,int newDenominator);
 
-public:
+		void setNumerator(int newNumerator) {
+			numerator = newNumerator;
+		}
+		void setDenominator(int newDenominator) {
+			denominator = newDenominator;
+		}
+		int getNumerator() {
+			return numerator;
+		}
+		int getDenominator() {
+			return denominator;
+		}
 
-	Fraction(int newNumerator,int newDenominator);
+		Fraction operator+(Fraction& fraction);
+		Fraction operator-(Fraction& fraction);
+		Fraction operator/(Fraction& fraction);
+		Fraction operator*(Fraction& fraction);
+	};
+}
 
-	void setNumerator(int newNumerator) {
-		numerator = newNumerator;
-		
-	}
-	void setDenominator(int newDenominator) {
-		denominator = newDenominator;
-
-	}
-	int getNumerator() {
-		return numerator;
-	}
-	int getDenominator() {
-		return denominator;
-	}
-
-	Fraction operator+(Fraction& fraction);
-	Fraction operator-(Fraction& fraction);
-	Fraction operator/(Fraction& fraction);
-	Fraction operator*(Fraction& fraction);
-
-
-
-
-};
 
